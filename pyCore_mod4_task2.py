@@ -24,6 +24,6 @@ def get_cat_data(path=str()):
     else:
         return cat_data
 
-cats_info = get_cat_data('D:/basic-projects/goit-algo-hw-04/goit-algo-hw-04/cat-data.txt')
+cats_info = get_cat_data('D:/basic-projects/goit-algo-hw-04/cat-data.txt')
 
 print(cats_info)
