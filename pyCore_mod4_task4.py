@@ -8,6 +8,21 @@ def add_contact(args, contacts):
     contacts[name] = phone
     return "Contact added"
 
+def change_contact(args, contacts):
+    name, phone = args
+    if name in contacts.keys():
+        contacts.update({name : phone})
+        return f"Contact {name} updated with {phone} as new phone"
+    else:
+        return "Invalid contact name"
+
+def print_phone(args, contacts):
+    name = args[0]
+    phone = contacts[name]
+    if name in contacts.keys():
+        return phone
+    else:
+        return "Invalid contact name"
 
 def main():
     contacts = {}
@@ -23,6 +38,10 @@ def main():
             print("How can I help you?")
         elif command == "add":
             print(add_contact(args, contacts))
+        elif command == "change":
+            print(change_contact(args, contacts))
+        elif command == "phone":
+            print(print_phone(args, contacts))
         elif command == "all":
             print(contacts)
         else:
