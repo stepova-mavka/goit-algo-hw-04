@@ -23,6 +23,16 @@ def print_phone(args, contacts):
         return phone
     else:
         return "Invalid contact name"
+    
+def print_all_contacts(contacts):
+    if len(contacts) == 0:
+        return "No saved contacts"
+    else:
+        contacts_output = ""
+        for name, phone in contacts.items():
+            contacts_output += f"Contact Name: {name}, Phone Number: {phone}\n"
+        return contacts_output
+
 
 def main():
     contacts = {}
@@ -43,7 +53,7 @@ def main():
         elif command == "phone":
             print(print_phone(args, contacts))
         elif command == "all":
-            print(contacts)
+            print(print_all_contacts(contacts))
         else:
             print("Invalid command")
 
