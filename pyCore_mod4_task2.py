@@ -1,4 +1,4 @@
-def cats_info(path=str()):
+def get_cats_info(path=str()):
     cat_data = []
     try :
         with open(path, "r", encoding="utf-8") as fh:
@@ -24,6 +24,6 @@ def cats_info(path=str()):
     else:
         return cat_data
 
-cats_info = cats_info('D:/basic-projects/goit-algo-hw-04/cat-data.txt')
+cats_info = get_cats_info('D:/basic-projects/goit-algo-hw-04/cat-data.txt')
 
 print(cats_info)
